@@ -1,0 +1,529 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red236\green241\blue247;\red251\green0\blue7;
+\red0\green0\blue0;\red42\green42\blue42;\red107\green0\blue1;\red0\green0\blue255;\red77\green80\blue85;
+\red24\green112\blue43;\red9\green60\blue148;\red19\green118\blue70;\red111\green14\blue195;\red164\green69\blue11;
+\red14\green110\blue109;\red191\green28\blue37;}
+{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c94118\c95686\c97647;\cssrgb\c100000\c0\c0;
+\cssrgb\c0\c0\c0;\cssrgb\c21961\c21961\c21961;\cssrgb\c50196\c0\c0;\cssrgb\c0\c0\c100000;\cssrgb\c37255\c38824\c40784;
+\cssrgb\c9412\c50196\c21961;\cssrgb\c1569\c31765\c64706;\cssrgb\c3529\c52549\c34510;\cssrgb\c51765\c18824\c80784;\cssrgb\c70980\c34902\c3137;
+\cssrgb\c0\c50196\c50196;\cssrgb\c80392\c19216\c19216;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf0 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 <\cf7 \strokec7 html\cf0 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf8 \strokec8 "en"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf7 \strokec7 head\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb3     \cf6 \strokec6 <\cf7 \strokec7 meta\cf0 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf8 \strokec8 "UTF-8"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 meta\cf0 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf8 \strokec8 "viewport"\cf0 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf8 \strokec8 "width=device-width, initial-scale=1.0"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 title\cf6 \strokec6 >\cf0 \strokec5 Microfinance & Banking Analytics Dashboard\cf6 \strokec6 </\cf7 \strokec7 title\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf9 \strokec9 <!-- Tailwind CSS -->\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf0 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf8 \strokec8 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf9 \strokec9 <!-- Chart.js for data visualization -->\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf0 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf8 \strokec8 "https://cdn.jsdelivr.net/npm/chart.js"\cf6 \strokec6 ></\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf9 \strokec9 <!-- Google Fonts: Inter -->\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf0 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "preconnect"\cf0 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://fonts.googleapis.com"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf0 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "preconnect"\cf0 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://fonts.gstatic.com"\cf0 \strokec5  \cf4 \strokec4 crossorigin\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf0 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"\cf0 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "stylesheet"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 style\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 /* Custom styles for a professional financial dashboard theme */\cf0 \cb1 \strokec5 \
+\cb3         \cf7 \strokec7 body\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 font-family:\cf0 \strokec5  \cf10 \strokec10 'Inter'\cf0 \strokec5 , \cf11 \strokec11 sans-serif\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 background:\cf0 \strokec5  \cf11 \strokec11 linear-gradient(to\cf0 \strokec5  \cf11 \strokec11 bottom\cf0 \strokec5  \cf11 \strokec11 right\cf0 \strokec5 , \cf11 \strokec11 #111827\cf0 \strokec5 , \cf11 \strokec11 #1f2937)\cf0 \strokec5 ; \cf9 \strokec9 /* Professional dark gradient */\cf0 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf0 \strokec5  \cf11 \strokec11 #d1d5db\cf0 \strokec5 ; \cf9 \strokec9 /* Light gray text */\cf0 \cb1 \strokec5 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 .kpi-card\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 background-color:\cf0 \strokec5  \cf11 \strokec11 #1f2937\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 border:\cf0 \strokec5  \cf12 \strokec12 1px\cf0 \strokec5  \cf11 \strokec11 solid\cf0 \strokec5  \cf11 \strokec11 #374151\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 transition:\cf0 \strokec5  \cf11 \strokec11 transform\cf0 \strokec5  \cf12 \strokec12 0.2s\cf0 \strokec5  \cf11 \strokec11 ease-in-out\cf0 \strokec5 , \cf11 \strokec11 box-shadow\cf0 \strokec5  \cf12 \strokec12 0.2s\cf0 \strokec5  \cf11 \strokec11 ease-in-out\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 .kpi-card:hover\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 transform:\cf0 \strokec5  \cf11 \strokec11 translateY(\cf12 \strokec12 -5px\cf11 \strokec11 )\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 box-shadow:\cf0 \strokec5  \cf12 \strokec12 0\cf0 \strokec5  \cf12 \strokec12 10px\cf0 \strokec5  \cf12 \strokec12 15px\cf0 \strokec5  \cf12 \strokec12 -3px\cf0 \strokec5  \cf11 \strokec11 rgba(\cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0.2\cf11 \strokec11 )\cf0 \strokec5 , \cf12 \strokec12 0\cf0 \strokec5  \cf12 \strokec12 4px\cf0 \strokec5  \cf12 \strokec12 6px\cf0 \strokec5  \cf12 \strokec12 -2px\cf0 \strokec5  \cf11 \strokec11 rgba(\cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0.1\cf11 \strokec11 )\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 .chart-container\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 background-color:\cf0 \strokec5  \cf11 \strokec11 #1f2937\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 border:\cf0 \strokec5  \cf12 \strokec12 1px\cf0 \strokec5  \cf11 \strokec11 solid\cf0 \strokec5  \cf11 \strokec11 #374151\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 padding:\cf0 \strokec5  \cf12 \strokec12 1.5rem\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 border-radius:\cf0 \strokec5  \cf12 \strokec12 0.75rem\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 position:\cf0 \strokec5  \cf11 \strokec11 relative\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 height:\cf0 \strokec5  \cf12 \strokec12 400px\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf9 \strokec9 /* Custom scrollbar */\cf0 \cb1 \strokec5 \
+\cb3         \cf7 \strokec7 ::-webkit-scrollbar\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 width:\cf0 \strokec5  \cf12 \strokec12 8px\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 ::-webkit-scrollbar-track\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 background:\cf0 \strokec5  \cf11 \strokec11 #1f2937\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 ::-webkit-scrollbar-thumb\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 background:\cf0 \strokec5  \cf11 \strokec11 #4b5563\cf0 \strokec5 ;\cb1 \
+\cb3             \cf4 \strokec4 border-radius:\cf0 \strokec5  \cf12 \strokec12 4px\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 ::-webkit-scrollbar-thumb:hover\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 background:\cf0 \strokec5  \cf11 \strokec11 #6b7280\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cf7 \strokec7 .modal-backdrop\cf0 \strokec5  \{\cb1 \
+\cb3             \cf4 \strokec4 background-color:\cf0 \strokec5  \cf11 \strokec11 rgba(\cf12 \strokec12 0\cf0 \strokec5 ,\cf12 \strokec12 0\cf0 \strokec5 ,\cf12 \strokec12 0\cf0 \strokec5 ,\cf12 \strokec12 0.5\cf11 \strokec11 )\cf0 \strokec5 ;\cb1 \
+\cb3         \}\cb1 \
+\cb3     \cf6 \strokec6 </\cf7 \strokec7 style\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf7 \strokec7 head\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf7 \strokec7 body\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "antialiased"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb3     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex flex-col min-h-screen"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 <!-- Header -->\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf7 \strokec7 header\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-gray-900/80 backdrop-blur-sm border-b border-gray-700 p-4 sticky top-0 z-10"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "container mx-auto flex justify-between items-center"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center gap-3"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 svg\cf0 \strokec5  \cf4 \strokec4 xmlns\cf6 \strokec6 =\cf8 \strokec8 "http://www.w3.org/2000/svg"\cf0 \strokec5  \cf4 \strokec4 width\cf6 \strokec6 =\cf8 \strokec8 "28"\cf0 \strokec5  \cf4 \strokec4 height\cf6 \strokec6 =\cf8 \strokec8 "28"\cf0 \strokec5  \cf4 \strokec4 viewBox\cf6 \strokec6 =\cf8 \strokec8 "0 0 24 24"\cf0 \strokec5  \cf4 \strokec4 fill\cf6 \strokec6 =\cf8 \strokec8 "none"\cf0 \strokec5  \cf4 \strokec4 stroke\cf6 \strokec6 =\cf8 \strokec8 "currentColor"\cf0 \strokec5  \cf4 \strokec4 stroke-width\cf6 \strokec6 =\cf8 \strokec8 "2"\cf0 \strokec5  \cf4 \strokec4 stroke-linecap\cf6 \strokec6 =\cf8 \strokec8 "round"\cf0 \strokec5  \cf4 \strokec4 stroke-linejoin\cf6 \strokec6 =\cf8 \strokec8 "round"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-blue-600"\cf6 \strokec6 ><\cf7 \strokec7 path\cf0 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf8 \strokec8 "M2 9a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9Z"\cf6 \strokec6 /><\cf7 \strokec7 path\cf0 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf8 \strokec8 "M8 21v-3.1A2 2 0 0 1 9.9 16H14a2 2 0 0 1 1.9 1.9V21"\cf6 \strokec6 /><\cf7 \strokec7 path\cf0 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf8 \strokec8 "M12 16V6"\cf6 \strokec6 /><\cf7 \strokec7 path\cf0 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf8 \strokec8 "M8 6v4"\cf6 \strokec6 /><\cf7 \strokec7 path\cf0 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf8 \strokec8 "M16 6v4"\cf6 \strokec6 /></\cf7 \strokec7 svg\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h1\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl md:text-2xl font-bold text-white"\cf6 \strokec6 >\cf0 \strokec5 FinSecure Analytics Canada | Banking Dashboard\cf6 \strokec6 </\cf7 \strokec7 h1\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf7 \strokec7 header\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\cb3         \cf9 \strokec9 <!-- Main Content -->\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf7 \strokec7 main\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-grow container mx-auto p-4 md:p-6 lg:p-8"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 <!-- Filter Controls -->\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mb-6 p-4 rounded-lg bg-gray-800 border border-gray-700 flex flex-wrap items-center gap-4"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-grow"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 label\cf0 \strokec5  \cf4 \strokec4 for\cf6 \strokec6 =\cf8 \strokec8 "date-range"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400 block mb-1"\cf6 \strokec6 >\cf0 \strokec5 Date Range\cf6 \strokec6 </\cf7 \strokec7 label\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 select\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "date-range"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Last Quarter\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Last 6 Months\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Year-to-Date\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Last 12 Months\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 select\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-grow"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 label\cf0 \strokec5  \cf4 \strokec4 for\cf6 \strokec6 =\cf8 \strokec8 "branch"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400 block mb-1"\cf6 \strokec6 >\cf0 \strokec5 Branch/Region\cf6 \strokec6 </\cf7 \strokec7 label\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 select\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "branch"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 All Branches\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Ottawa Centre\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Kanata West\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Gatineau\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Kingston\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 select\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-grow"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                      \cf6 \strokec6 <\cf7 \strokec7 label\cf0 \strokec5  \cf4 \strokec4 for\cf6 \strokec6 =\cf8 \strokec8 "loan-type"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400 block mb-1"\cf6 \strokec6 >\cf0 \strokec5 Loan Type\cf6 \strokec6 </\cf7 \strokec7 label\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 select\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "loan-type"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 All Types\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Business\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Agriculture\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Personal\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \strokec5 Housing\cf6 \strokec6 </\cf7 \strokec7 option\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 select\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "pt-6 flex flex-wrap gap-2"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "apply-filters-btn"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         Apply Filters\cb1 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 input\cf0 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf8 \strokec8 "file"\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "file-input"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "hidden"\cf0 \strokec5  \cf4 \strokec4 accept\cf6 \strokec6 =\cf8 \strokec8 ".json"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "load-data-btn"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-colors"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         Load Data\cb1 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "generate-insights-btn"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition-colors whitespace-nowrap"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \uc0\u10024  Generate Insights\cb1 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cb1 \
+\cb3             \cf9 \strokec9 <!-- KPI Cards -->\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "kpi-card p-5 rounded-lg"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400"\cf6 \strokec6 >\cf0 \strokec5 Total Loan Portfolio\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-portfolio"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl font-bold text-white mt-2"\cf6 \strokec6 >\cf0 \strokec5 $85.2M CAD\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-portfolio-change"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-green-400 flex items-center mt-1"\cf6 \strokec6 >\cf0 \strokec5 +5.2% this quarter\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "kpi-card p-5 rounded-lg"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400"\cf6 \strokec6 >\cf0 \strokec5 Active Clients\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                      \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-clients"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl font-bold text-white mt-2"\cf6 \strokec6 >\cf0 \strokec5 15,720\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-clients-change"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-green-400 flex items-center mt-1"\cf6 \strokec6 >\cf0 \strokec5 +410 new clients\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "kpi-card p-5 rounded-lg"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400"\cf6 \strokec6 >\cf0 \strokec5 Portfolio at Risk (PAR &gt;30d)\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-par"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl font-bold text-white mt-2"\cf6 \strokec6 >\cf0 \strokec5 3.1%\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-par-change"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-red-400 flex items-center mt-1"\cf6 \strokec6 >\cf0 \strokec5 +0.4% vs last quarter\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "kpi-card p-5 rounded-lg"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-medium text-gray-400"\cf6 \strokec6 >\cf0 \strokec5 Avg. Loan Balance\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-avg-loan"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl font-bold text-white mt-2"\cf6 \strokec6 >\cf0 \strokec5 $5,420 CAD\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "kpi-avg-loan-change"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-green-400 flex items-center mt-1"\cf6 \strokec6 >\cf0 \strokec5 +$150 vs last quarter\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\cb3             \cf9 \strokec9 <!-- Charts Grid -->\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "chart-container"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-semibold text-white mb-4"\cf6 \strokec6 >\cf0 \strokec5 Loan Portfolio Growth\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 canvas\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "portfolioGrowthChart"\cf6 \strokec6 ></\cf7 \strokec7 canvas\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "chart-container"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-semibold text-white mb-4"\cf6 \strokec6 >\cf0 \strokec5 Loan Distribution by Type\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 canvas\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "loanDistributionChart"\cf6 \strokec6 ></\cf7 \strokec7 canvas\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "chart-container"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-semibold text-white mb-4"\cf6 \strokec6 >\cf0 \strokec5 Portfolio at Risk (%) by Branch\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 canvas\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "parByBranchChart"\cf6 \strokec6 ></\cf7 \strokec7 canvas\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "chart-container"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-semibold text-white mb-4"\cf6 \strokec6 >\cf0 \strokec5 Client Growth (Last 6 Months)\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 canvas\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "clientGrowthChart"\cf6 \strokec6 ></\cf7 \strokec7 canvas\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf7 \strokec7 main\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\cb3         \cf9 \strokec9 <!-- Footer -->\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf7 \strokec7 footer\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-center py-4 border-t border-gray-700 mt-auto"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-500"\cf6 \strokec6 >\cf0 \strokec5 &copy; 2025 FinSecure Analytics Canada. For demonstration purposes only.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf7 \strokec7 footer\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\cb3     \cf9 \strokec9 <!-- Gemini Insights Modal -->\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "insights-modal"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fixed inset-0 z-50 items-center justify-center hidden p-4 overflow-x-hidden overflow-y-auto bg-gray-900/80"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative w-full max-w-2xl max-h-full"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative bg-gray-800 rounded-lg shadow border border-gray-700"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-start justify-between p-4 border-b rounded-t border-gray-600"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-semibold text-white"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \uc0\u10024  AI Generated Insights\cb1 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf8 \strokec8 "button"\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "close-modal-btn"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 bg-transparent hover:bg-gray-700 hover:text-white rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 svg\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-3 h-3"\cf0 \strokec5  \cf4 \strokec4 aria-hidden\cf6 \strokec6 =\cf8 \strokec8 "true"\cf0 \strokec5  \cf4 \strokec4 xmlns\cf6 \strokec6 =\cf8 \strokec8 "http://www.w3.org/2000/svg"\cf0 \strokec5  \cf4 \strokec4 fill\cf6 \strokec6 =\cf8 \strokec8 "none"\cf0 \strokec5  \cf4 \strokec4 viewBox\cf6 \strokec6 =\cf8 \strokec8 "0 0 14 14"\cf6 \strokec6 ><\cf7 \strokec7 path\cf0 \strokec5  \cf4 \strokec4 stroke\cf6 \strokec6 =\cf8 \strokec8 "currentColor"\cf0 \strokec5  \cf4 \strokec4 stroke-linecap\cf6 \strokec6 =\cf8 \strokec8 "round"\cf0 \strokec5  \cf4 \strokec4 stroke-linejoin\cf6 \strokec6 =\cf8 \strokec8 "round"\cf0 \strokec5  \cf4 \strokec4 stroke-width\cf6 \strokec6 =\cf8 \strokec8 "2"\cf0 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf8 \strokec8 "m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"\cf6 \strokec6 /></\cf7 \strokec7 svg\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "sr-only"\cf6 \strokec6 >\cf0 \strokec5 Close modal\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "p-6 space-y-6"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "insights-content"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-base leading-relaxed text-gray-300"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \strokec5 Generating insights...\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cb3         \cf13 \strokec13 let\cf0 \strokec5  geminiApiKey = \cf10 \strokec10 ''\cf0 \strokec5 ;\cb1 \
+\
+\cb3         \cf13 \strokec13 const\cf0 \strokec5  generateRandomData = (count, min, max, decimals = \cf14 \strokec14 0\cf0 \strokec5 ) => \cf15 \strokec15 Array\cf0 \strokec5 .\cf13 \strokec13 from\cf0 \strokec5 (\{ length: count \}, () => parseFloat((\cf15 \strokec15 Math\cf0 \strokec5 .random() * (max - min) + min).toFixed(decimals)));\cb1 \
+\cb3         \cb1 \
+\cb3         \cf13 \strokec13 const\cf0 \strokec5  chartTextColor = \cf10 \strokec10 '#9ca3af'\cf0 \strokec5 ;\cb1 \
+\cb3         \cf13 \strokec13 const\cf0 \strokec5  chartGridColor = \cf10 \strokec10 '#374151'\cf0 \strokec5 ;\cb1 \
+\cb3         \cb1 \
+\cb3         \cf13 \strokec13 let\cf0 \strokec5  portfolioGrowthChart, loanDistributionChart, parByBranchChart, clientGrowthChart;\cb1 \
+\
+\cb3         \cf13 \strokec13 function\cf0 \strokec5  createCharts() \{\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  portfolioCtx = document.getElementById(\cf10 \strokec10 'portfolioGrowthChart'\cf0 \strokec5 ).getContext(\cf10 \strokec10 '2d'\cf0 \strokec5 );\cb1 \
+\cb3             portfolioGrowthChart = \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 Chart\cf0 \strokec5 (portfolioCtx, \{\cb1 \
+\cb3                 type: \cf10 \strokec10 'line'\cf0 \strokec5 ,\cb1 \
+\cb3                 data: \{\cb1 \
+\cb3                     labels: [\cf10 \strokec10 'Q1'\cf0 \strokec5 , \cf10 \strokec10 'Q2'\cf0 \strokec5 , \cf10 \strokec10 'Q3'\cf0 \strokec5 , \cf10 \strokec10 'Q4'\cf0 \strokec5 , \cf10 \strokec10 'Q1 Next'\cf0 \strokec5 , \cf10 \strokec10 'Q2 Next'\cf0 \strokec5 ],\cb1 \
+\cb3                     datasets: [\{\cb1 \
+\cb3                         label: \cf10 \strokec10 'Portfolio Value ($M CAD)'\cf0 \strokec5 ,\cb1 \
+\cb3                         data: generateRandomData(\cf14 \strokec14 6\cf0 \strokec5 , \cf14 \strokec14 70\cf0 \strokec5 , \cf14 \strokec14 90\cf0 \strokec5 , \cf14 \strokec14 1\cf0 \strokec5 ),\cb1 \
+\cb3                         borderColor: \cf10 \strokec10 '#2563eb'\cf0 \strokec5 ,\cb1 \
+\cb3                         backgroundColor: \cf10 \strokec10 'rgba(37, 99, 235, 0.1)'\cf0 \strokec5 ,\cb1 \
+\cb3                         fill: \cf13 \strokec13 true\cf0 \strokec5 ,\cb1 \
+\cb3                         tension: \cf14 \strokec14 0.3\cf0 \strokec5 ,\cb1 \
+\cb3                     \}]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 options: \{ responsive: \cf13 \strokec13 true\cf0 \strokec5 , maintainAspectRatio: \cf13 \strokec13 false\cf0 \strokec5 , scales: \{ y: \{ ticks: \{ color: chartTextColor \}, grid: \{ color: chartGridColor \} \}, x: \{ ticks: \{ color: chartTextColor \}, grid: \{ color: chartGridColor \} \} \}, plugins: \{ legend: \{ labels: \{ color: chartTextColor \} \} \} \}\cb1 \
+\cb3             \});\cb1 \
+\
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  loanDistCtx = document.getElementById(\cf10 \strokec10 'loanDistributionChart'\cf0 \strokec5 ).getContext(\cf10 \strokec10 '2d'\cf0 \strokec5 );\cb1 \
+\cb3             loanDistributionChart = \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 Chart\cf0 \strokec5 (loanDistCtx, \{\cb1 \
+\cb3                 type: \cf10 \strokec10 'doughnut'\cf0 \strokec5 ,\cb1 \
+\cb3                 data: \{\cb1 \
+\cb3                     labels: [\cf10 \strokec10 'Business'\cf0 \strokec5 , \cf10 \strokec10 'Agriculture'\cf0 \strokec5 , \cf10 \strokec10 'Personal'\cf0 \strokec5 , \cf10 \strokec10 'Housing'\cf0 \strokec5 ],\cb1 \
+\cb3                     datasets: [\{\cb1 \
+\cb3                         data: generateRandomData(\cf14 \strokec14 4\cf0 \strokec5 , \cf14 \strokec14 15\cf0 \strokec5 , \cf14 \strokec14 40\cf0 \strokec5 ),\cb1 \
+\cb3                         backgroundColor: [\cf10 \strokec10 '#2563eb'\cf0 \strokec5 , \cf10 \strokec10 '#16a34a'\cf0 \strokec5 , \cf10 \strokec10 '#f97316'\cf0 \strokec5 , \cf10 \strokec10 '#9333ea'\cf0 \strokec5 ],\cb1 \
+\cb3                         borderColor: \cf10 \strokec10 '#1f2937'\cf0 \strokec5 ,\cb1 \
+\cb3                         borderWidth: \cf14 \strokec14 4\cf0 \strokec5 ,\cb1 \
+\cb3                     \}]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 options: \{ responsive: \cf13 \strokec13 true\cf0 \strokec5 , maintainAspectRatio: \cf13 \strokec13 false\cf0 \strokec5 , cutout: \cf10 \strokec10 '60%'\cf0 \strokec5 , plugins: \{ legend: \{ position: \cf10 \strokec10 'right'\cf0 \strokec5 , labels: \{ color: chartTextColor \} \} \} \}\cb1 \
+\cb3             \});\cb1 \
+\
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  parCtx = document.getElementById(\cf10 \strokec10 'parByBranchChart'\cf0 \strokec5 ).getContext(\cf10 \strokec10 '2d'\cf0 \strokec5 );\cb1 \
+\cb3             parByBranchChart = \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 Chart\cf0 \strokec5 (parCtx, \{\cb1 \
+\cb3                 type: \cf10 \strokec10 'bar'\cf0 \strokec5 ,\cb1 \
+\cb3                 data: \{\cb1 \
+\cb3                     labels: [\cf10 \strokec10 'Ottawa Centre'\cf0 \strokec5 , \cf10 \strokec10 'Kanata West'\cf0 \strokec5 , \cf10 \strokec10 'Gatineau'\cf0 \strokec5 , \cf10 \strokec10 'Kingston'\cf0 \strokec5 ],\cb1 \
+\cb3                     datasets: [\{\cb1 \
+\cb3                         label: \cf10 \strokec10 'PAR >30d %'\cf0 \strokec5 ,\cb1 \
+\cb3                         data: generateRandomData(\cf14 \strokec14 4\cf0 \strokec5 , \cf14 \strokec14 1.5\cf0 \strokec5 , \cf14 \strokec14 5.5\cf0 \strokec5 , \cf14 \strokec14 1\cf0 \strokec5 ),\cb1 \
+\cb3                         backgroundColor: [\cf10 \strokec10 '#60a5fa'\cf0 \strokec5 , \cf10 \strokec10 '#60a5fa'\cf0 \strokec5 , \cf10 \strokec10 '#f87171'\cf0 \strokec5 , \cf10 \strokec10 '#60a5fa'\cf0 \strokec5 ],\cb1 \
+\cb3                         borderRadius: \cf14 \strokec14 4\cf0 \strokec5 ,\cb1 \
+\cb3                     \}]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 options: \{ responsive: \cf13 \strokec13 true\cf0 \strokec5 , maintainAspectRatio: \cf13 \strokec13 false\cf0 \strokec5 , scales: \{ y: \{ ticks: \{ color: chartTextColor, callback: (v) => v + \cf10 \strokec10 '%'\cf0 \strokec5  \}, grid: \{ color: chartGridColor \} \}, x: \{ ticks: \{ color: chartTextColor \}, grid: \{ display: \cf13 \strokec13 false\cf0 \strokec5  \} \} \}, plugins: \{ legend: \{ display: \cf13 \strokec13 false\cf0 \strokec5  \} \} \}\cb1 \
+\cb3             \});\cb1 \
+\cb3             \cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  clientCtx = document.getElementById(\cf10 \strokec10 'clientGrowthChart'\cf0 \strokec5 ).getContext(\cf10 \strokec10 '2d'\cf0 \strokec5 );\cb1 \
+\cb3             clientGrowthChart = \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 Chart\cf0 \strokec5 (clientCtx, \{\cb1 \
+\cb3                 type: \cf10 \strokec10 'bar'\cf0 \strokec5 ,\cb1 \
+\cb3                 data: \{\cb1 \
+\cb3                     labels: [\cf10 \strokec10 'Jan'\cf0 \strokec5 , \cf10 \strokec10 'Feb'\cf0 \strokec5 , \cf10 \strokec10 'Mar'\cf0 \strokec5 , \cf10 \strokec10 'Apr'\cf0 \strokec5 , \cf10 \strokec10 'May'\cf0 \strokec5 , \cf10 \strokec10 'Jun'\cf0 \strokec5 ],\cb1 \
+\cb3                     datasets: [\cb1 \
+\cb3                         \{ label: \cf10 \strokec10 'New Clients'\cf0 \strokec5 , data: generateRandomData(\cf14 \strokec14 6\cf0 \strokec5 , \cf14 \strokec14 200\cf0 \strokec5 , \cf14 \strokec14 500\cf0 \strokec5 ), backgroundColor: \cf10 \strokec10 '#22c55e'\cf0 \strokec5 , borderRadius: \cf14 \strokec14 4\cf0 \strokec5 , \},\cb1 \
+\cb3                         \{ label: \cf10 \strokec10 'Clients Exited'\cf0 \strokec5 , data: generateRandomData(\cf14 \strokec14 6\cf0 \strokec5 , \cf14 \strokec14 50\cf0 \strokec5 , \cf14 \strokec14 150\cf0 \strokec5 ), backgroundColor: \cf10 \strokec10 '#ef4444'\cf0 \strokec5 , borderRadius: \cf14 \strokec14 4\cf0 \strokec5 , \}\cb1 \
+\cb3                     ]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 options: \{\cb1 \
+\cb3                     responsive: \cf13 \strokec13 true\cf0 \strokec5 ,\cb1 \
+\cb3                     maintainAspectRatio: \cf13 \strokec13 false\cf0 \strokec5 ,\cb1 \
+\cb3                     scales: \{\cb1 \
+\cb3                         y: \{\cb1 \
+\cb3                             stacked: \cf13 \strokec13 true\cf0 \strokec5 ,\cb1 \
+\cb3                             ticks: \{ color: chartTextColor \},\cb1 \
+\cb3                             grid: \{ color: chartGridColor \}\cb1 \
+\cb3                         \},\cb1 \
+\cb3                         x: \{\cb1 \
+\cb3                             stacked: \cf13 \strokec13 true\cf0 \strokec5 ,\cb1 \
+\cb3                             ticks: \{ color: chartTextColor \},\cb1 \
+\cb3                             grid: \{ color: chartGridColor \}\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \},\cb1 \
+\cb3                     plugins: \{\cb1 \
+\cb3                         legend: \{\cb1 \
+\cb3                             labels: \{ color: chartTextColor \}\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \}\cb1 \
+\cb3                 \}\cb1 \
+\cb3             \});\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cb1 \
+\cb3         \cf13 \strokec13 function\cf0 \strokec5  updateDashboardWithRandomData() \{\cb1 \
+\cb3              \cf9 \strokec9 // Update portfolio\cf0 \cb1 \strokec5 \
+\cb3             document.getElementById(\cf10 \strokec10 'kpi-portfolio'\cf0 \strokec5 ).textContent = \cf10 \strokec10 '$'\cf0 \strokec5  + (\cf15 \strokec15 Math\cf0 \strokec5 .random() * (\cf14 \strokec14 95\cf0 \strokec5  - \cf14 \strokec14 80\cf0 \strokec5 ) + \cf14 \strokec14 80\cf0 \strokec5 ).toFixed(\cf14 \strokec14 1\cf0 \strokec5 ) + \cf10 \strokec10 'M CAD'\cf0 \strokec5 ;\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  portfolioChange = (\cf15 \strokec15 Math\cf0 \strokec5 .random() * \cf14 \strokec14 5\cf0 \strokec5  - \cf14 \strokec14 1\cf0 \strokec5 );\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  kpiPortfolioChange = document.getElementById(\cf10 \strokec10 'kpi-portfolio-change'\cf0 \strokec5 );\cb1 \
+\cb3             kpiPortfolioChange.classList.remove(\cf10 \strokec10 'text-green-400'\cf0 \strokec5 , \cf10 \strokec10 'text-red-400'\cf0 \strokec5 );\cb1 \
+\cb3             kpiPortfolioChange.classList.add(portfolioChange >= \cf14 \strokec14 0\cf0 \strokec5  ? \cf10 \strokec10 'text-green-400'\cf0 \strokec5  : \cf10 \strokec10 'text-red-400'\cf0 \strokec5 );\cb1 \
+\cb3             kpiPortfolioChange.textContent = \cf10 \strokec10 `\cf0 \strokec5 $\{portfolioChange >= \cf14 \strokec14 0\cf0 \strokec5  ? \cf10 \strokec10 '+'\cf0 \strokec5  : \cf10 \strokec10 ''\cf0 \strokec5 \}$\{portfolioChange.toFixed(\cf14 \strokec14 1\cf0 \strokec5 )\}\cf10 \strokec10 % this quarter`\cf0 \strokec5 ;\cb1 \
+\cb3             \cb1 \
+\cb3             \cf9 \strokec9 // Update clients\cf0 \cb1 \strokec5 \
+\cb3             document.getElementById(\cf10 \strokec10 'kpi-clients'\cf0 \strokec5 ).textContent = \cf15 \strokec15 Math\cf0 \strokec5 .floor(\cf15 \strokec15 Math\cf0 \strokec5 .random() * (\cf14 \strokec14 16000\cf0 \strokec5  - \cf14 \strokec14 15000\cf0 \strokec5 ) + \cf14 \strokec14 15000\cf0 \strokec5 ).toLocaleString();\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  clientsChange = \cf15 \strokec15 Math\cf0 \strokec5 .floor(\cf15 \strokec15 Math\cf0 \strokec5 .random() * (\cf14 \strokec14 500\cf0 \strokec5  - \cf14 \strokec14 100\cf0 \strokec5 ) + \cf14 \strokec14 100\cf0 \strokec5 );\cb1 \
+\cb3             document.getElementById(\cf10 \strokec10 'kpi-clients-change'\cf0 \strokec5 ).textContent = \cf10 \strokec10 `+\cf0 \strokec5 $\{clientsChange\}\cf10 \strokec10  new clients`\cf0 \strokec5 ;\cb1 \
+\
+\cb3             \cf9 \strokec9 // Update PAR\cf0 \cb1 \strokec5 \
+\cb3             document.getElementById(\cf10 \strokec10 'kpi-par'\cf0 \strokec5 ).textContent = (\cf15 \strokec15 Math\cf0 \strokec5 .random() * (\cf14 \strokec14 5\cf0 \strokec5  - \cf14 \strokec14 1.5\cf0 \strokec5 ) + \cf14 \strokec14 1.5\cf0 \strokec5 ).toFixed(\cf14 \strokec14 1\cf0 \strokec5 ) + \cf10 \strokec10 '%'\cf0 \strokec5 ;\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  parChange = (\cf15 \strokec15 Math\cf0 \strokec5 .random() * \cf14 \strokec14 1\cf0 \strokec5  - \cf14 \strokec14 0.5\cf0 \strokec5 );\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  kpiParChange = document.getElementById(\cf10 \strokec10 'kpi-par-change'\cf0 \strokec5 );\cb1 \
+\cb3             kpiParChange.classList.remove(\cf10 \strokec10 'text-green-400'\cf0 \strokec5 , \cf10 \strokec10 'text-red-400'\cf0 \strokec5 );\cb1 \
+\cb3             kpiParChange.classList.add(parChange >= \cf14 \strokec14 0\cf0 \strokec5  ? \cf10 \strokec10 'text-red-400'\cf0 \strokec5  : \cf10 \strokec10 'text-green-400'\cf0 \strokec5 );\cb1 \
+\cb3             kpiParChange.textContent = \cf10 \strokec10 `\cf0 \strokec5 $\{parChange >= \cf14 \strokec14 0\cf0 \strokec5  ? \cf10 \strokec10 '+'\cf0 \strokec5  : \cf10 \strokec10 ''\cf0 \strokec5 \}$\{parChange.toFixed(\cf14 \strokec14 1\cf0 \strokec5 )\}\cf10 \strokec10 % vs last quarter`\cf0 \strokec5 ;\cb1 \
+\cb3             \cb1 \
+\cb3             \cf9 \strokec9 // Update Avg Loan\cf0 \cb1 \strokec5 \
+\cb3             document.getElementById(\cf10 \strokec10 'kpi-avg-loan'\cf0 \strokec5 ).textContent = \cf10 \strokec10 '$'\cf0 \strokec5  + \cf15 \strokec15 Math\cf0 \strokec5 .floor(\cf15 \strokec15 Math\cf0 \strokec5 .random() * (\cf14 \strokec14 5800\cf0 \strokec5  - \cf14 \strokec14 5200\cf0 \strokec5 ) + \cf14 \strokec14 5200\cf0 \strokec5 ).toLocaleString() + \cf10 \strokec10 ' CAD'\cf0 \strokec5 ;\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  avgLoanChange = (\cf15 \strokec15 Math\cf0 \strokec5 .random() * \cf14 \strokec14 400\cf0 \strokec5  - \cf14 \strokec14 100\cf0 \strokec5 );\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  kpiAvgLoanChange = document.getElementById(\cf10 \strokec10 'kpi-avg-loan-change'\cf0 \strokec5 );\cb1 \
+\cb3             kpiAvgLoanChange.classList.remove(\cf10 \strokec10 'text-green-400'\cf0 \strokec5 , \cf10 \strokec10 'text-red-400'\cf0 \strokec5 );\cb1 \
+\cb3             kpiAvgLoanChange.classList.add(avgLoanChange >= \cf14 \strokec14 0\cf0 \strokec5  ? \cf10 \strokec10 'text-green-400'\cf0 \strokec5  : \cf10 \strokec10 'text-red-400'\cf0 \strokec5 );\cb1 \
+\cb3             kpiAvgLoanChange.textContent = \cf10 \strokec10 `\cf0 \strokec5 $\{avgLoanChange >= \cf14 \strokec14 0\cf0 \strokec5  ? \cf10 \strokec10 '+'\cf0 \strokec5  : \cf10 \strokec10 ''\cf0 \strokec5 \}\cf16 \strokec16 $\cf0 \strokec5 $\{\cf15 \strokec15 Math\cf0 \strokec5 .abs(avgLoanChange).toFixed(\cf14 \strokec14 0\cf0 \strokec5 )\}\cf10 \strokec10  vs last quarter`\cf0 \strokec5 ;\cb1 \
+\cb3             \cb1 \
+\cb3             \cf9 \strokec9 // Update Charts\cf0 \cb1 \strokec5 \
+\cb3             portfolioGrowthChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = generateRandomData(\cf14 \strokec14 6\cf0 \strokec5 , \cf14 \strokec14 70\cf0 \strokec5 , \cf14 \strokec14 90\cf0 \strokec5 , \cf14 \strokec14 1\cf0 \strokec5 );\cb1 \
+\cb3             portfolioGrowthChart.update();\cb1 \
+\cb3             loanDistributionChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = generateRandomData(\cf14 \strokec14 4\cf0 \strokec5 , \cf14 \strokec14 15\cf0 \strokec5 , \cf14 \strokec14 40\cf0 \strokec5 );\cb1 \
+\cb3             loanDistributionChart.update();\cb1 \
+\cb3             parByBranchChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = generateRandomData(\cf14 \strokec14 4\cf0 \strokec5 , \cf14 \strokec14 1.5\cf0 \strokec5 , \cf14 \strokec14 5.5\cf0 \strokec5 , \cf14 \strokec14 1\cf0 \strokec5 );\cb1 \
+\cb3             parByBranchChart.update();\cb1 \
+\cb3             clientGrowthChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = generateRandomData(\cf14 \strokec14 6\cf0 \strokec5 , \cf14 \strokec14 200\cf0 \strokec5 , \cf14 \strokec14 500\cf0 \strokec5 );\cb1 \
+\cb3             clientGrowthChart.data.datasets[\cf14 \strokec14 1\cf0 \strokec5 ].data = generateRandomData(\cf14 \strokec14 6\cf0 \strokec5 , \cf14 \strokec14 50\cf0 \strokec5 , \cf14 \strokec14 150\cf0 \strokec5 );\cb1 \
+\cb3             clientGrowthChart.update();\cb1 \
+\cb3         \}\cb1 \
+\
+\cb3         \cf13 \strokec13 function\cf0 \strokec5  updateDashboardWithData(data) \{\cb1 \
+\cb3             \cf13 \strokec13 try\cf0 \strokec5  \{\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-portfolio'\cf0 \strokec5 ).textContent = data.kpis.portfolio;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-portfolio-change'\cf0 \strokec5 ).textContent = data.kpis.portfolioChange;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-clients'\cf0 \strokec5 ).textContent = data.kpis.clients;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-clients-change'\cf0 \strokec5 ).textContent = data.kpis.clientsChange;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-par'\cf0 \strokec5 ).textContent = data.kpis.par;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-par-change'\cf0 \strokec5 ).textContent = data.kpis.parChange;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-avg-loan'\cf0 \strokec5 ).textContent = data.kpis.avgLoan;\cb1 \
+\cb3                 document.getElementById(\cf10 \strokec10 'kpi-avg-loan-change'\cf0 \strokec5 ).textContent = data.kpis.avgLoanChange;\cb1 \
+\
+\cb3                 portfolioGrowthChart.data.labels = data.charts.portfolioGrowth.labels;\cb1 \
+\cb3                 portfolioGrowthChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = data.charts.portfolioGrowth.values;\cb1 \
+\cb3                 portfolioGrowthChart.update();\cb1 \
+\
+\cb3                 loanDistributionChart.data.labels = data.charts.loanDistribution.labels;\cb1 \
+\cb3                 loanDistributionChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = data.charts.loanDistribution.values;\cb1 \
+\cb3                 loanDistributionChart.update();\cb1 \
+\
+\cb3                 parByBranchChart.data.labels = data.charts.parByBranch.labels;\cb1 \
+\cb3                 parByBranchChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = data.charts.parByBranch.values;\cb1 \
+\cb3                 parByBranchChart.update();\cb1 \
+\
+\cb3                 clientGrowthChart.data.labels = data.charts.clientGrowth.labels;\cb1 \
+\cb3                 clientGrowthChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data = data.charts.clientGrowth.newClients;\cb1 \
+\cb3                 clientGrowthChart.data.datasets[\cf14 \strokec14 1\cf0 \strokec5 ].data = data.charts.clientGrowth.clientsExited;\cb1 \
+\cb3                 clientGrowthChart.update();\cb1 \
+\cb3                 \cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  applyBtn = document.getElementById(\cf10 \strokec10 'apply-filters-btn'\cf0 \strokec5 );\cb1 \
+\cb3                 applyBtn.disabled = \cf13 \strokec13 true\cf0 \strokec5 ;\cb1 \
+\cb3                 applyBtn.textContent = \cf10 \strokec10 'Custom Data Loaded'\cf0 \strokec5 ;\cb1 \
+\cb3                 applyBtn.classList.add(\cf10 \strokec10 'opacity-50'\cf0 \strokec5 , \cf10 \strokec10 'cursor-not-allowed'\cf0 \strokec5 );\cb1 \
+\
+\cb3             \} \cf13 \strokec13 catch\cf0 \strokec5 (e) \{\cb1 \
+\cb3                 alert(\cf10 \strokec10 "Failed to load data. Ensure the JSON file has the correct structure."\cf0 \strokec5 );\cb1 \
+\cb3                 console.error(\cf10 \strokec10 "Error updating dashboard with file data:"\cf0 \strokec5 , e);\cb1 \
+\cb3             \}\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cb1 \
+\cb3         \cf9 \strokec9 /*\cf0 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9             Expected JSON structure for custom data loading:\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9               "kpis": \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "portfolio": "$92.5M CAD",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "portfolioChange": "+7.1% this quarter",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "clients": "16,250",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "clientsChange": "+530 new clients",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "par": "2.8%",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "parChange": "-0.3% vs last quarter",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "avgLoan": "$5,690 CAD",\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "avgLoanChange": "+$270 vs last quarter"\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9               \},\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9               "charts": \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "portfolioGrowth": \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "labels": ["Q1", "Q2", "Q3", "Q4", "Q1 Next", "Q2 Next"],\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "values": [81.2, 83.5, 85.1, 88.9, 90.3, 92.5]\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \},\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "loanDistribution": \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "labels": ["Business", "Agriculture", "Personal", "Housing"],\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "values": [45, 20, 25, 10]\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \},\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "parByBranch": \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "labels": ["Ottawa Centre", "Kanata West", "Gatineau", "Kingston"],\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "values": [2.1, 3.5, 4.9, 2.5]\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \},\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 "clientGrowth": \{\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "newClients": [410, 450, 510, 480, 530, 550],\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                   "clientsExited": [80, 95, 110, 100, 120, 115]\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9                 \}\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9               \}\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9             \}\cf0 \cb1 \strokec5 \
+\cf9 \cb3 \strokec9         */\cf0 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb3         \cf13 \strokec13 async\cf0 \strokec5  \cf13 \strokec13 function\cf0 \strokec5  generateInsights() \{\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  insightsContent = document.getElementById(\cf10 \strokec10 'insights-content'\cf0 \strokec5 );\cb1 \
+\cb3             insightsContent.innerHTML = \cf10 \strokec10 '<p class="text-gray-300">Generating insights...</p>'\cf0 \strokec5 ;\cb1 \
+\cb3             document.getElementById(\cf10 \strokec10 'insights-modal'\cf0 \strokec5 ).classList.remove(\cf10 \strokec10 'hidden'\cf0 \strokec5 );\cb1 \
+\cb3             document.getElementById(\cf10 \strokec10 'insights-modal'\cf0 \strokec5 ).classList.add(\cf10 \strokec10 'flex'\cf0 \strokec5 );\cb1 \
+\
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  kpis = \{\cb1 \
+\cb3                 portfolio: document.getElementById(\cf10 \strokec10 'kpi-portfolio'\cf0 \strokec5 ).textContent,\cb1 \
+\cb3                 clients: document.getElementById(\cf10 \strokec10 'kpi-clients'\cf0 \strokec5 ).textContent,\cb1 \
+\cb3                 par: document.getElementById(\cf10 \strokec10 'kpi-par'\cf0 \strokec5 ).textContent,\cb1 \
+\cb3                 avgLoan: document.getElementById(\cf10 \strokec10 'kpi-avg-loan'\cf0 \strokec5 ).textContent,\cb1 \
+\cb3             \};\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  prompt = \cf10 \strokec10 `\cf0 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb3 \strokec10                 As a senior financial analyst for FinSecure Analytics Canada, provide a brief, executive-level summary of the following dashboard data for a Canadian banking/microfinance institution. \cf0 \cb1 \strokec5 \
+\cf10 \cb3 \strokec10                 Your summary should be 2-3 paragraphs. First, give a high-level overview of the institution's health. Second, identify the most significant risk or opportunity revealed by the data and suggest a clear, actionable next step relevant to the Canadian market.\cf0 \cb1 \strokec5 \
+\cf10 \cb3 \strokec10                 Present the output in clean HTML format.\cf0 \cb1 \strokec5 \
+\
+\cf10 \cb3 \strokec10                 Here is the data:\cf0 \cb1 \strokec5 \
+\cf10 \cb3 \strokec10                 - Total Loan Portfolio: \cf0 \strokec5 $\{kpis.portfolio\}\cb1 \
+\cf10 \cb3 \strokec10                 - Active Clients: \cf0 \strokec5 $\{kpis.clients\}\cb1 \
+\cf10 \cb3 \strokec10                 - Portfolio at Risk (>30 days): \cf0 \strokec5 $\{kpis.par\}\cb1 \
+\cf10 \cb3 \strokec10                 - Average Loan Balance: \cf0 \strokec5 $\{kpis.avgLoan\}\cb1 \
+\cf10 \cb3 \strokec10                 - Loan Distribution: \cf0 \strokec5 $\{loanDistributionChart.data.labels.join(\cf10 \strokec10 ', '\cf0 \strokec5 )\}\cf10 \strokec10  with values \cf0 \strokec5 $\{loanDistributionChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data.join(\cf10 \strokec10 ', '\cf0 \strokec5 )\}\cb1 \
+\cf10 \cb3 \strokec10                 - PAR by Branch: \cf0 \strokec5 $\{parByBranchChart.data.labels.join(\cf10 \strokec10 ', '\cf0 \strokec5 )\}\cf10 \strokec10  with values \cf0 \strokec5 $\{parByBranchChart.data.datasets[\cf14 \strokec14 0\cf0 \strokec5 ].data.join(\cf10 \strokec10 ', '\cf0 \strokec5 )\}\cf10 \strokec10 %\cf0 \cb1 \strokec5 \
+\cf10 \cb3 \strokec10             `\cf0 \strokec5 ;\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb3              \cf13 \strokec13 try\cf0 \strokec5  \{\cb1 \
+\cb3                 \cf13 \strokec13 if\cf0 \strokec5  (!geminiApiKey) \{\cb1 \
+\cb3                     \cf13 \strokec13 throw\cf0 \strokec5  \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 Error\cf0 \strokec5 (\cf10 \strokec10 "API Key is not set."\cf0 \strokec5 );\cb1 \
+\cb3                 \}\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  apiUrl = \cf10 \strokec10 `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=\cf0 \strokec5 $\{geminiApiKey\}\cf10 \strokec10 `\cf0 \strokec5 ;\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  payload = \{ contents: [\{ parts: [\{ text: prompt \}] \}] \};\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  response = \cf13 \strokec13 await\cf0 \strokec5  fetch(apiUrl, \{ method: \cf10 \strokec10 'POST'\cf0 \strokec5 , headers: \{ \cf10 \strokec10 'Content-Type'\cf0 \strokec5 : \cf10 \strokec10 'application/json'\cf0 \strokec5  \}, body: \cf15 \strokec15 JSON\cf0 \strokec5 .stringify(payload) \});\cb1 \
+\
+\cb3                 \cf13 \strokec13 if\cf0 \strokec5  (!response.ok) \cf13 \strokec13 throw\cf0 \strokec5  \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 Error\cf0 \strokec5 (\cf10 \strokec10 `API call failed: \cf0 \strokec5 $\{response.status\}\cf10 \strokec10 `\cf0 \strokec5 );\cb1 \
+\cb3                 \cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  result = \cf13 \strokec13 await\cf0 \strokec5  response.json();\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  text = result.candidates?.[\cf14 \strokec14 0\cf0 \strokec5 ]?.content?.parts?.[\cf14 \strokec14 0\cf0 \strokec5 ]?.text;\cb1 \
+\cb3                 insightsContent.innerHTML = text || \cf10 \strokec10 '<p>The model returned an empty response.</p>'\cf0 \strokec5 ;\cb1 \
+\
+\cb3             \} \cf13 \strokec13 catch\cf0 \strokec5  (error) \{\cb1 \
+\cb3                 console.error(\cf10 \strokec10 "Error calling Gemini API:"\cf0 \strokec5 , error);\cb1 \
+\cb3                 insightsContent.innerHTML = \cf10 \strokec10 `<p class="text-red-400">An error occurred while generating insights. Ensure your API key is correct and check the console for details.</p>`\cf0 \strokec5 ;\cb1 \
+\cb3             \}\cb1 \
+\cb3         \}\cb1 \
+\cb3         \cb1 \
+\cb3         document.addEventListener(\cf10 \strokec10 'DOMContentLoaded'\cf0 \strokec5 , () => \{\cb1 \
+\cb3             createCharts();\cb1 \
+\cb3             geminiApiKey = prompt(\cf10 \strokec10 "Please enter your Google AI API key to enable AI insights:"\cf0 \strokec5 );\cb1 \
+\cb3             \cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  generateInsightsBtn = document.getElementById(\cf10 \strokec10 'generate-insights-btn'\cf0 \strokec5 );\cb1 \
+\cb3             \cf13 \strokec13 if\cf0 \strokec5  (!geminiApiKey) \{\cb1 \
+\cb3                 generateInsightsBtn.disabled = \cf13 \strokec13 true\cf0 \strokec5 ;\cb1 \
+\cb3                 generateInsightsBtn.title = \cf10 \strokec10 "No API Key provided. Refresh to enter one."\cf0 \strokec5 ;\cb1 \
+\cb3                 generateInsightsBtn.classList.add(\cf10 \strokec10 'opacity-50'\cf0 \strokec5 , \cf10 \strokec10 'cursor-not-allowed'\cf0 \strokec5 );\cb1 \
+\cb3             \}\cb1 \
+\cb3             \cb1 \
+\cb3             document.getElementById(\cf10 \strokec10 'apply-filters-btn'\cf0 \strokec5 ).addEventListener(\cf10 \strokec10 'click'\cf0 \strokec5 , () => \{\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  btn = document.getElementById(\cf10 \strokec10 'apply-filters-btn'\cf0 \strokec5 );\cb1 \
+\cb3                 btn.textContent = \cf10 \strokec10 'Loading...'\cf0 \strokec5 ;\cb1 \
+\cb3                 btn.disabled = \cf13 \strokec13 true\cf0 \strokec5 ;\cb1 \
+\cb3                 setTimeout(() => \{\cb1 \
+\cb3                     updateDashboardWithRandomData();\cb1 \
+\cb3                     btn.textContent = \cf10 \strokec10 'Apply Filters'\cf0 \strokec5 ;\cb1 \
+\cb3                     btn.disabled = \cf13 \strokec13 false\cf0 \strokec5 ;\cb1 \
+\cb3                 \}, \cf14 \strokec14 750\cf0 \strokec5 );\cb1 \
+\cb3             \});\cb1 \
+\
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  loadDataBtn = document.getElementById(\cf10 \strokec10 'load-data-btn'\cf0 \strokec5 );\cb1 \
+\cb3             \cf13 \strokec13 const\cf0 \strokec5  fileInput = document.getElementById(\cf10 \strokec10 'file-input'\cf0 \strokec5 );\cb1 \
+\cb3             loadDataBtn.addEventListener(\cf10 \strokec10 'click'\cf0 \strokec5 , () => fileInput.click());\cb1 \
+\cb3             fileInput.addEventListener(\cf10 \strokec10 'change'\cf0 \strokec5 , (event) => \{\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  file = event.target.files[\cf14 \strokec14 0\cf0 \strokec5 ];\cb1 \
+\cb3                 \cf13 \strokec13 if\cf0 \strokec5  (!file) \cf13 \strokec13 return\cf0 \strokec5 ;\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  reader = \cf13 \strokec13 new\cf0 \strokec5  \cf15 \strokec15 FileReader\cf0 \strokec5 ();\cb1 \
+\cb3                 reader.onload = (e) => \{\cb1 \
+\cb3                     \cf13 \strokec13 try\cf0 \strokec5  \{\cb1 \
+\cb3                         updateDashboardWithData(\cf15 \strokec15 JSON\cf0 \strokec5 .parse(e.target.result));\cb1 \
+\cb3                     \} \cf13 \strokec13 catch\cf0 \strokec5  (err) \{\cb1 \
+\cb3                         alert(\cf10 \strokec10 'Error parsing JSON file. Please check the file format.'\cf0 \strokec5 );\cb1 \
+\cb3                     \}\cb1 \
+\cb3                 \};\cb1 \
+\cb3                 reader.readAsText(file);\cb1 \
+\cb3             \});\cb1 \
+\
+\cb3             generateInsightsBtn.addEventListener(\cf10 \strokec10 'click'\cf0 \strokec5 , generateInsights);\cb1 \
+\cb3             document.getElementById(\cf10 \strokec10 'close-modal-btn'\cf0 \strokec5 ).addEventListener(\cf10 \strokec10 'click'\cf0 \strokec5 , () => \{\cb1 \
+\cb3                 \cf13 \strokec13 const\cf0 \strokec5  modal = document.getElementById(\cf10 \strokec10 'insights-modal'\cf0 \strokec5 );\cb1 \
+\cb3                 modal.classList.add(\cf10 \strokec10 'hidden'\cf0 \strokec5 );\cb1 \
+\cb3                 modal.classList.remove(\cf10 \strokec10 'flex'\cf0 \strokec5 );\cb1 \
+\cb3             \});\cb1 \
+\cb3         \});\cb1 \
+\cb3     \cf6 \strokec6 </\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf7 \strokec7 body\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 </\cf7 \strokec7 html\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
+\
+\
+}
