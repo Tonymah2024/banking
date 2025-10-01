@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telecom Analytics Dashboard</title>
+    <title>Microfinance & Banking Analytics Dashboard</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js for data visualization -->
@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom styles to enhance the look and feel */
+        /* Custom styles for a professional financial dashboard theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Dark background */
+            background: linear-gradient(to bottom right, #111827, #1f2937); /* Professional dark gradient */
             color: #d1d5db; /* Light gray text */
         }
         .kpi-card {
@@ -37,7 +37,7 @@
             position: relative;
             height: 400px;
         }
-        /* Custom scrollbar for a better dark-mode experience */
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -63,8 +63,8 @@
         <header class="bg-gray-900/80 backdrop-blur-sm border-b border-gray-700 p-4 sticky top-0 z-10">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.85a10 10 0 0 1 14 0"/><path d="M8.5 16.42a5 5 0 0 1 7 0"/></svg>
-                    <h1 class="text-xl md:text-2xl font-bold text-white">VisiVault Analytics Ltd. | Telecom Analytics Demo</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M2 9a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9Z"/><path d="M8 21v-3.1A2 2 0 0 1 9.9 16H14a2 2 0 0 1 1.9 1.9V21"/><path d="M12 16V6"/><path d="M8 6v4"/><path d="M16 6v4"/></svg>
+                    <h1 class="text-xl md:text-2xl font-bold text-white">FinSecure Analytics Canada | Banking Dashboard</h1>
                 </div>
             </div>
         </header>
@@ -75,36 +75,38 @@
             <div class="mb-6 p-4 rounded-lg bg-gray-800 border border-gray-700 flex flex-wrap items-center gap-4">
                 <div class="flex-grow">
                     <label for="date-range" class="text-sm font-medium text-gray-400 block mb-1">Date Range</label>
-                    <select id="date-range" class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500">
-                        <option>Last 30 Days</option>
-                        <option>Last 90 Days</option>
+                    <select id="date-range" class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option>Last Quarter</option>
                         <option>Last 6 Months</option>
+                        <option>Year-to-Date</option>
                         <option>Last 12 Months</option>
                     </select>
                 </div>
                 <div class="flex-grow">
-                    <label for="region" class="text-sm font-medium text-gray-400 block mb-1">Region</label>
-                    <select id="region" class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500">
-                        <option>All Regions</option>
-                        <option>North America</option>
-                        <option>Europe</option>
-                        <option>Asia-Pacific</option>
+                    <label for="branch" class="text-sm font-medium text-gray-400 block mb-1">Branch/Region</label>
+                    <select id="branch" class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option>All Branches</option>
+                        <option>Ottawa Centre</option>
+                        <option>Kanata West</option>
+                        <option>Gatineau</option>
+                        <option>Kingston</option>
                     </select>
                 </div>
                 <div class="flex-grow">
-                     <label for="network-type" class="text-sm font-medium text-gray-400 block mb-1">Network Type</label>
-                    <select id="network-type" class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500">
-                        <option>All</option>
-                        <option>5G</option>
-                        <option>4G/LTE</option>
-                        <option>3G</option>
+                     <label for="loan-type" class="text-sm font-medium text-gray-400 block mb-1">Loan Type</label>
+                    <select id="loan-type" class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option>All Types</option>
+                        <option>Business</option>
+                        <option>Agriculture</option>
+                        <option>Personal</option>
+                        <option>Housing</option>
                     </select>
                 </div>
                 <div class="pt-6 flex flex-wrap gap-2">
-                    <button id="apply-filters-btn" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
+                    <button id="apply-filters-btn" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
                         Apply Filters
                     </button>
-                     <input type="file" id="file-input" class="hidden" accept=".json">
+                    <input type="file" id="file-input" class="hidden" accept=".json">
                     <button id="load-data-btn" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
                         Load Data
                     </button>
@@ -116,101 +118,76 @@
             
             <!-- KPI Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
-                <!-- Card 1: Active Subscribers -->
                 <div class="kpi-card p-5 rounded-lg">
-                    <div class="flex items-center justify-between">
-                        <p class="text-sm font-medium text-gray-400">Active Subscribers</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
+                    <p class="text-sm font-medium text-gray-400">Total Loan Portfolio</p>
                     <div>
-                        <p id="kpi-subscribers" class="text-3xl font-bold text-white mt-2">12.4M</p>
-                        <p id="kpi-subscribers-change" class="text-xs text-green-400 flex items-center mt-1">+2.1% this month</p>
+                        <p id="kpi-portfolio" class="text-3xl font-bold text-white mt-2">$85.2M CAD</p>
+                        <p id="kpi-portfolio-change" class="text-xs text-green-400 flex items-center mt-1">+5.2% this quarter</p>
                     </div>
                 </div>
-                <!-- Card 2: Avg. Network Latency -->
                 <div class="kpi-card p-5 rounded-lg">
-                    <div class="flex items-center justify-between">
-                        <p class="text-sm font-medium text-gray-400">Avg. Network Latency</p>
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a2 2 0 0 0 2 2h4.54"/><path d="M4 12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"/><path d="M11 19a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"/><path d="M19 4a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="m22 12-2.3-2.3a1.5 1.5 0 0 0-2.12 0L14 13.24"/><path d="m4.24 19.76 2.3-2.3a1.5 1.5 0 0 0 0-2.12L3 11.8"/></svg>
-                    </div>
+                    <p class="text-sm font-medium text-gray-400">Active Clients</p>
                      <div>
-                        <p id="kpi-latency" class="text-3xl font-bold text-white mt-2">28 ms</p>
-                        <p id="kpi-latency-change" class="text-xs text-green-400 flex items-center mt-1">-5.2% improvement</p>
+                        <p id="kpi-clients" class="text-3xl font-bold text-white mt-2">15,720</p>
+                        <p id="kpi-clients-change" class="text-xs text-green-400 flex items-center mt-1">+410 new clients</p>
                     </div>
                 </div>
-                <!-- Card 3: Churn Rate -->
                 <div class="kpi-card p-5 rounded-lg">
-                    <div class="flex items-center justify-between">
-                        <p class="text-sm font-medium text-gray-400">Churn Rate</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                    </div>
+                    <p class="text-sm font-medium text-gray-400">Portfolio at Risk (PAR &gt;30d)</p>
                     <div>
-                        <p id="kpi-churn" class="text-3xl font-bold text-white mt-2">1.8%</p>
-                        <p id="kpi-churn-change" class="text-xs text-red-400 flex items-center mt-1">+0.3% this month</p>
+                        <p id="kpi-par" class="text-3xl font-bold text-white mt-2">3.1%</p>
+                        <p id="kpi-par-change" class="text-xs text-red-400 flex items-center mt-1">+0.4% vs last quarter</p>
                     </div>
                 </div>
-                <!-- Card 4: ARPU -->
                 <div class="kpi-card p-5 rounded-lg">
-                    <div class="flex items-center justify-between">
-                        <p class="text-sm font-medium text-gray-400">ARPU</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
+                    <p class="text-sm font-medium text-gray-400">Avg. Loan Balance</p>
                     <div>
-                        <p id="kpi-arpu" class="text-3xl font-bold text-white mt-2">$45.60</p>
-                        <p id="kpi-arpu-change" class="text-xs text-green-400 flex items-center mt-1">+$0.50 vs last month</p>
+                        <p id="kpi-avg-loan" class="text-3xl font-bold text-white mt-2">$5,420 CAD</p>
+                        <p id="kpi-avg-loan-change" class="text-xs text-green-400 flex items-center mt-1">+$150 vs last quarter</p>
                     </div>
                 </div>
             </div>
 
             <!-- Charts Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-                <!-- Chart 1: Network Performance -->
                 <div class="chart-container">
-                    <h3 class="text-lg font-semibold text-white mb-4">Network Performance Over Time</h3>
-                    <canvas id="networkPerformanceChart"></canvas>
+                    <h3 class="text-lg font-semibold text-white mb-4">Loan Portfolio Growth</h3>
+                    <canvas id="portfolioGrowthChart"></canvas>
                 </div>
-                <!-- Chart 2: Call Drop Rate by Region -->
                 <div class="chart-container">
-                    <h3 class="text-lg font-semibold text-white mb-4">Call Drop Rate (%) by Region</h3>
-                    <canvas id="callDropChart"></canvas>
+                    <h3 class="text-lg font-semibold text-white mb-4">Loan Distribution by Type</h3>
+                    <canvas id="loanDistributionChart"></canvas>
                 </div>
-                <!-- Chart 3: Data Usage by Plan -->
                 <div class="chart-container">
-                    <h3 class="text-lg font-semibold text-white mb-4">Avg. Data Usage (GB) by Plan</h3>
-                    <canvas id="dataUsageChart"></canvas>
+                    <h3 class="text-lg font-semibold text-white mb-4">Portfolio at Risk (%) by Branch</h3>
+                    <canvas id="parByBranchChart"></canvas>
                 </div>
-                <!-- Chart 4: Customer Satisfaction -->
                 <div class="chart-container">
-                    <h3 class="text-lg font-semibold text-white mb-4">Customer Satisfaction (CSAT)</h3>
-                    <canvas id="csatChart"></canvas>
+                    <h3 class="text-lg font-semibold text-white mb-4">Client Growth (Last 6 Months)</h3>
+                    <canvas id="clientGrowthChart"></canvas>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
         <footer class="text-center py-4 border-t border-gray-700 mt-auto">
-            <p class="text-sm text-gray-500">&copy; 2025 VisiVault Analytics Ltd. For demonstration purposes only.</p>
+            <p class="text-sm text-gray-500">&copy; 2025 FinSecure Analytics Canada. For demonstration purposes only.</p>
         </footer>
     </div>
 
     <!-- Gemini Insights Modal -->
     <div id="insights-modal" class="fixed inset-0 z-50 items-center justify-center hidden p-4 overflow-x-hidden overflow-y-auto bg-gray-900/80">
         <div class="relative w-full max-w-2xl max-h-full">
-            <!-- Modal content -->
             <div class="relative bg-gray-800 rounded-lg shadow border border-gray-700">
-                <!-- Modal header -->
                 <div class="flex items-start justify-between p-4 border-b rounded-t border-gray-600">
                     <h3 class="text-xl font-semibold text-white">
                         ✨ AI Generated Insights
                     </h3>
                     <button type="button" id="close-modal-btn" class="text-gray-400 bg-transparent hover:bg-gray-700 hover:text-white rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                        </svg>
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/></svg>
                         <span class="sr-only">Close modal</span>
                     </button>
                 </div>
-                <!-- Modal body -->
                 <div class="p-6 space-y-6">
                     <div id="insights-content" class="text-base leading-relaxed text-gray-300">
                         <p>Generating insights...</p>
@@ -220,155 +197,91 @@
         </div>
     </div>
 
-
     <script>
         let geminiApiKey = '';
 
-        // --- UTILITY FUNCTIONS ---
-        const generateRandomData = (count, min, max, decimals = 0) => {
-            const data = [];
-            for (let i = 0; i < count; i++) {
-                const randomValue = Math.random() * (max - min) + min;
-                data.push(parseFloat(randomValue.toFixed(decimals)));
-            }
-            return data;
-        };
+        const generateRandomData = (count, min, max, decimals = 0) => Array.from({ length: count }, () => parseFloat((Math.random() * (max - min) + min).toFixed(decimals)));
         
-        const chartTextColor = '#9ca3af'; // text-gray-400
-        const chartGridColor = '#374151'; // border-gray-700
+        const chartTextColor = '#9ca3af';
+        const chartGridColor = '#374151';
         
-        // --- CHART INSTANCES ---
-        let networkChart, callDropChart, dataUsageChart, csatChart;
+        let portfolioGrowthChart, loanDistributionChart, parByBranchChart, clientGrowthChart;
 
-        // --- CHART INITIALIZATION FUNCTION ---
         function createCharts() {
-            // 1. Network Performance Chart (Line)
-            const networkCtx = document.getElementById('networkPerformanceChart').getContext('2d');
-            networkChart = new Chart(networkCtx, {
+            const portfolioCtx = document.getElementById('portfolioGrowthChart').getContext('2d');
+            portfolioGrowthChart = new Chart(portfolioCtx, {
                 type: 'line',
                 data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                    labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q1 Next', 'Q2 Next'],
+                    datasets: [{
+                        label: 'Portfolio Value ($M CAD)',
+                        data: generateRandomData(6, 70, 90, 1),
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { color: chartTextColor }, grid: { color: chartGridColor } }, x: { ticks: { color: chartTextColor }, grid: { color: chartGridColor } } }, plugins: { legend: { labels: { color: chartTextColor } } } }
+            });
+
+            const loanDistCtx = document.getElementById('loanDistributionChart').getContext('2d');
+            loanDistributionChart = new Chart(loanDistCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Business', 'Agriculture', 'Personal', 'Housing'],
+                    datasets: [{
+                        data: generateRandomData(4, 15, 40),
+                        backgroundColor: ['#2563eb', '#16a34a', '#f97316', '#9333ea'],
+                        borderColor: '#1f2937',
+                        borderWidth: 4,
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'right', labels: { color: chartTextColor } } } }
+            });
+
+            const parCtx = document.getElementById('parByBranchChart').getContext('2d');
+            parByBranchChart = new Chart(parCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Ottawa Centre', 'Kanata West', 'Gatineau', 'Kingston'],
+                    datasets: [{
+                        label: 'PAR >30d %',
+                        data: generateRandomData(4, 1.5, 5.5, 1),
+                        backgroundColor: ['#60a5fa', '#60a5fa', '#f87171', '#60a5fa'],
+                        borderRadius: 4,
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { color: chartTextColor, callback: (v) => v + '%' }, grid: { color: chartGridColor } }, x: { ticks: { color: chartTextColor }, grid: { display: false } } }, plugins: { legend: { display: false } } }
+            });
+            
+            const clientCtx = document.getElementById('clientGrowthChart').getContext('2d');
+            clientGrowthChart = new Chart(clientCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
                     datasets: [
-                        {
-                            label: 'Avg. Latency (ms)',
-                            data: generateRandomData(8, 25, 40),
-                            borderColor: '#38bdf8', // sky-400
-                            backgroundColor: 'rgba(56, 189, 248, 0.1)',
-                            fill: true,
-                            tension: 0.4,
-                        },
-                        {
-                            label: 'Avg. Jitter (ms)',
-                            data: generateRandomData(8, 2, 8),
-                            borderColor: '#fbbf24', // amber-400
-                            backgroundColor: 'rgba(251, 191, 36, 0.1)',
-                            fill: true,
-                            tension: 0.4,
-                        }
+                        { label: 'New Clients', data: generateRandomData(6, 200, 500), backgroundColor: '#22c55e', borderRadius: 4, },
+                        { label: 'Clients Exited', data: generateRandomData(6, 50, 150), backgroundColor: '#ef4444', borderRadius: 4, }
                     ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        y: { 
-                            beginAtZero: true,
+                        y: {
+                            stacked: true,
                             ticks: { color: chartTextColor },
                             grid: { color: chartGridColor }
                         },
                         x: {
+                            stacked: true,
                             ticks: { color: chartTextColor },
                             grid: { color: chartGridColor }
                         }
                     },
-                    plugins: { legend: { labels: { color: chartTextColor } } }
-                }
-            });
-
-            // 2. Call Drop Chart (Bar)
-            const callDropCtx = document.getElementById('callDropChart').getContext('2d');
-            callDropChart = new Chart(callDropCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Urban Metro', 'Suburban', 'Rural', 'Highway'],
-                    datasets: [{
-                        label: 'Call Drop Rate %',
-                        data: generateRandomData(4, 0.5, 2.5, 1),
-                        backgroundColor: ['#2dd4bf', '#60a5fa', '#f87171', '#fbbf24'],
-                        borderRadius: 4,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: { color: chartTextColor, callback: (value) => value + '%' },
-                            grid: { color: chartGridColor }
-                        },
-                        x: {
-                            ticks: { color: chartTextColor },
-                            grid: { display: false }
-                        }
-                    },
-                    plugins: { legend: { display: false } }
-                }
-            });
-
-            // 3. Data Usage Chart (Horizontal Bar)
-            const dataUsageCtx = document.getElementById('dataUsageChart').getContext('2d');
-            dataUsageChart = new Chart(dataUsageCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Unlimited Pro', 'Unlimited', 'Family Plan', 'Basic 10GB', 'Prepaid'],
-                    datasets: [{
-                        label: 'Avg Monthly GB Usage',
-                        data: generateRandomData(5, 8, 55, 1),
-                        backgroundColor: '#60a5fa',
-                        borderRadius: 4,
-                    }]
-                },
-                options: {
-                    indexAxis: 'y', // Makes the bar chart horizontal
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                         x: {
-                            beginAtZero: true,
-                            ticks: { color: chartTextColor, callback: (value) => value + ' GB' },
-                            grid: { color: chartGridColor }
-                        },
-                        y: {
-                            ticks: { color: chartTextColor },
-                            grid: { display: false }
-                        }
-                    },
-                    plugins: { legend: { display: false } }
-                }
-            });
-            
-            // 4. CSAT Chart (Doughnut)
-            const csatCtx = document.getElementById('csatChart').getContext('2d');
-            csatChart = new Chart(csatCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Very Satisfied', 'Satisfied', 'Neutral', 'Unsatisfied'],
-                    datasets: [{
-                        label: 'CSAT Scores',
-                        data: generateRandomData(4, 10, 50),
-                        backgroundColor: ['#22c55e', '#38bdf8', '#fbbf24', '#f87171'],
-                        borderColor: '#1f2937',
-                        borderWidth: 4,
-                    }]
-                },
-                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '60%',
                     plugins: {
                         legend: {
-                            position: 'right',
                             labels: { color: chartTextColor }
                         }
                     }
@@ -376,60 +289,76 @@
             });
         }
         
-        // --- DASHBOARD UPDATE FUNCTIONS ---
         function updateDashboardWithRandomData() {
-            // Update KPI cards with new random data
-            document.getElementById('kpi-subscribers').textContent = (Math.random() * (12.9 - 11.5) + 11.5).toFixed(1) + 'M';
-            document.getElementById('kpi-latency').textContent = Math.floor(Math.random() * (35 - 20) + 20) + ' ms';
-            document.getElementById('kpi-churn').textContent = (Math.random() * (2.5 - 1.0) + 1.0).toFixed(1) + '%';
-            document.getElementById('kpi-arpu').textContent = '$' + (Math.random() * (48 - 42) + 42).toFixed(2);
+             // Update portfolio
+            document.getElementById('kpi-portfolio').textContent = '$' + (Math.random() * (95 - 80) + 80).toFixed(1) + 'M CAD';
+            const portfolioChange = (Math.random() * 5 - 1);
+            const kpiPortfolioChange = document.getElementById('kpi-portfolio-change');
+            kpiPortfolioChange.classList.remove('text-green-400', 'text-red-400');
+            kpiPortfolioChange.classList.add(portfolioChange >= 0 ? 'text-green-400' : 'text-red-400');
+            kpiPortfolioChange.textContent = `${portfolioChange >= 0 ? '+' : ''}${portfolioChange.toFixed(1)}% this quarter`;
             
-            // Update charts with new data
-            networkChart.data.datasets[0].data = generateRandomData(8, 25, 40);
-            networkChart.data.datasets[1].data = generateRandomData(8, 2, 8);
-            networkChart.update();
+            // Update clients
+            document.getElementById('kpi-clients').textContent = Math.floor(Math.random() * (16000 - 15000) + 15000).toLocaleString();
+            const clientsChange = Math.floor(Math.random() * (500 - 100) + 100);
+            document.getElementById('kpi-clients-change').textContent = `+${clientsChange} new clients`;
+
+            // Update PAR
+            document.getElementById('kpi-par').textContent = (Math.random() * (5 - 1.5) + 1.5).toFixed(1) + '%';
+            const parChange = (Math.random() * 1 - 0.5);
+            const kpiParChange = document.getElementById('kpi-par-change');
+            kpiParChange.classList.remove('text-green-400', 'text-red-400');
+            kpiParChange.classList.add(parChange >= 0 ? 'text-red-400' : 'text-green-400');
+            kpiParChange.textContent = `${parChange >= 0 ? '+' : ''}${parChange.toFixed(1)}% vs last quarter`;
             
-            callDropChart.data.datasets[0].data = generateRandomData(4, 0.5, 2.5, 1);
-            callDropChart.update();
+            // Update Avg Loan
+            document.getElementById('kpi-avg-loan').textContent = '$' + Math.floor(Math.random() * (5800 - 5200) + 5200).toLocaleString() + ' CAD';
+            const avgLoanChange = (Math.random() * 400 - 100);
+            const kpiAvgLoanChange = document.getElementById('kpi-avg-loan-change');
+            kpiAvgLoanChange.classList.remove('text-green-400', 'text-red-400');
+            kpiAvgLoanChange.classList.add(avgLoanChange >= 0 ? 'text-green-400' : 'text-red-400');
+            kpiAvgLoanChange.textContent = `${avgLoanChange >= 0 ? '+' : ''}$${Math.abs(avgLoanChange).toFixed(0)} vs last quarter`;
             
-            dataUsageChart.data.datasets[0].data = generateRandomData(5, 8, 55, 1);
-            dataUsageChart.update();
-            
-            csatChart.data.datasets[0].data = generateRandomData(4, 10, 50);
-            csatChart.update();
+            // Update Charts
+            portfolioGrowthChart.data.datasets[0].data = generateRandomData(6, 70, 90, 1);
+            portfolioGrowthChart.update();
+            loanDistributionChart.data.datasets[0].data = generateRandomData(4, 15, 40);
+            loanDistributionChart.update();
+            parByBranchChart.data.datasets[0].data = generateRandomData(4, 1.5, 5.5, 1);
+            parByBranchChart.update();
+            clientGrowthChart.data.datasets[0].data = generateRandomData(6, 200, 500);
+            clientGrowthChart.data.datasets[1].data = generateRandomData(6, 50, 150);
+            clientGrowthChart.update();
         }
 
         function updateDashboardWithData(data) {
             try {
-                // Update KPIs
-                document.getElementById('kpi-subscribers').textContent = data.kpis.subscribers;
-                document.getElementById('kpi-subscribers-change').textContent = data.kpis.subscribersChange;
-                document.getElementById('kpi-latency').textContent = data.kpis.latency;
-                document.getElementById('kpi-latency-change').textContent = data.kpis.latencyChange;
-                document.getElementById('kpi-churn').textContent = data.kpis.churn;
-                document.getElementById('kpi-churn-change').textContent = data.kpis.churnChange;
-                document.getElementById('kpi-arpu').textContent = data.kpis.arpu;
-                document.getElementById('kpi-arpu-change').textContent = data.kpis.arpuChange;
+                document.getElementById('kpi-portfolio').textContent = data.kpis.portfolio;
+                document.getElementById('kpi-portfolio-change').textContent = data.kpis.portfolioChange;
+                document.getElementById('kpi-clients').textContent = data.kpis.clients;
+                document.getElementById('kpi-clients-change').textContent = data.kpis.clientsChange;
+                document.getElementById('kpi-par').textContent = data.kpis.par;
+                document.getElementById('kpi-par-change').textContent = data.kpis.parChange;
+                document.getElementById('kpi-avg-loan').textContent = data.kpis.avgLoan;
+                document.getElementById('kpi-avg-loan-change').textContent = data.kpis.avgLoanChange;
 
-                // Update Charts
-                networkChart.data.labels = data.charts.networkPerformance.labels;
-                networkChart.data.datasets[0].data = data.charts.networkPerformance.latency;
-                networkChart.data.datasets[1].data = data.charts.networkPerformance.jitter;
-                networkChart.update();
+                portfolioGrowthChart.data.labels = data.charts.portfolioGrowth.labels;
+                portfolioGrowthChart.data.datasets[0].data = data.charts.portfolioGrowth.values;
+                portfolioGrowthChart.update();
 
-                callDropChart.data.labels = data.charts.callDrop.labels;
-                callDropChart.data.datasets[0].data = data.charts.callDrop.rates;
-                callDropChart.update();
+                loanDistributionChart.data.labels = data.charts.loanDistribution.labels;
+                loanDistributionChart.data.datasets[0].data = data.charts.loanDistribution.values;
+                loanDistributionChart.update();
 
-                dataUsageChart.data.labels = data.charts.dataUsage.labels;
-                dataUsageChart.data.datasets[0].data = data.charts.dataUsage.usage;
-                dataUsageChart.update();
+                parByBranchChart.data.labels = data.charts.parByBranch.labels;
+                parByBranchChart.data.datasets[0].data = data.charts.parByBranch.values;
+                parByBranchChart.update();
 
-                csatChart.data.labels = data.charts.csat.labels;
-                csatChart.data.datasets[0].data = data.charts.csat.scores;
-                csatChart.update();
+                clientGrowthChart.data.labels = data.charts.clientGrowth.labels;
+                clientGrowthChart.data.datasets[0].data = data.charts.clientGrowth.newClients;
+                clientGrowthChart.data.datasets[1].data = data.charts.clientGrowth.clientsExited;
+                clientGrowthChart.update();
                 
-                // Disable filter button as it's not wired to filter loaded data
                 const applyBtn = document.getElementById('apply-filters-btn');
                 applyBtn.disabled = true;
                 applyBtn.textContent = 'Custom Data Loaded';
@@ -440,245 +369,135 @@
                 console.error("Error updating dashboard with file data:", e);
             }
         }
-
+        
         /*
             Expected JSON structure for custom data loading:
             {
               "kpis": {
-                "subscribers": "15.1M",
-                "subscribersChange": "+3.5% this month",
-                "latency": "22 ms",
-                "latencyChange": "-8.0% improvement",
-                "churn": "1.2%",
-                "churnChange": "-0.6% this month",
-                "arpu": "$48.90",
-                "arpuChange": "+$3.30 vs last month"
+                "portfolio": "$92.5M CAD",
+                "portfolioChange": "+7.1% this quarter",
+                "clients": "16,250",
+                "clientsChange": "+530 new clients",
+                "par": "2.8%",
+                "parChange": "-0.3% vs last quarter",
+                "avgLoan": "$5,690 CAD",
+                "avgLoanChange": "+$270 vs last quarter"
               },
               "charts": {
-                "networkPerformance": {
-                  "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                  "latency": [35, 33, 30, 28, 25, 24, 23, 22],
-                  "jitter": [7, 6, 6, 5, 4, 4, 3, 3]
+                "portfolioGrowth": {
+                  "labels": ["Q1", "Q2", "Q3", "Q4", "Q1 Next", "Q2 Next"],
+                  "values": [81.2, 83.5, 85.1, 88.9, 90.3, 92.5]
                 },
-                "callDrop": {
-                  "labels": ["Urban Metro", "Suburban", "Rural", "Highway"],
-                  "rates": [1.1, 1.5, 2.8, 2.1]
+                "loanDistribution": {
+                  "labels": ["Business", "Agriculture", "Personal", "Housing"],
+                  "values": [45, 20, 25, 10]
                 },
-                "dataUsage": {
-                  "labels": ["Unlimited Pro", "Unlimited", "Family Plan", "Basic 10GB", "Prepaid"],
-                  "usage": [62.5, 45.1, 35.8, 9.2, 7.5]
+                "parByBranch": {
+                  "labels": ["Ottawa Centre", "Kanata West", "Gatineau", "Kingston"],
+                  "values": [2.1, 3.5, 4.9, 2.5]
                 },
-                "csat": {
-                  "labels": ["Very Satisfied", "Satisfied", "Neutral", "Unsatisfied"],
-                  "scores": [60, 25, 10, 5]
+                "clientGrowth": {
+                  "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                  "newClients": [410, 450, 510, 480, 530, 550],
+                  "clientsExited": [80, 95, 110, 100, 120, 115]
                 }
               }
             }
         */
 
-        // --- GEMINI API FUNCTIONALITY ---
         async function generateInsights() {
             const insightsContent = document.getElementById('insights-content');
-            insightsContent.innerHTML = '<p>Generating insights...</p>';
+            insightsContent.innerHTML = '<p class="text-gray-300">Generating insights...</p>';
             document.getElementById('insights-modal').classList.remove('hidden');
             document.getElementById('insights-modal').classList.add('flex');
 
-
-            // 1. Gather data from the dashboard
-            const kpiSubscribers = document.getElementById('kpi-subscribers').textContent;
-            const kpiLatency = document.getElementById('kpi-latency').textContent;
-            const kpiChurn = document.getElementById('kpi-churn').textContent;
-            const kpiArpu = document.getElementById('kpi-arpu').textContent;
-
-            const networkPerformanceData = {
-                labels: networkChart.data.labels,
-                latency: networkChart.data.datasets[0].data,
-                jitter: networkChart.data.datasets[1].data,
+            const kpis = {
+                portfolio: document.getElementById('kpi-portfolio').textContent,
+                clients: document.getElementById('kpi-clients').textContent,
+                par: document.getElementById('kpi-par').textContent,
+                avgLoan: document.getElementById('kpi-avg-loan').textContent,
             };
-
-            const callDropData = {
-                labels: callDropChart.data.labels,
-                rates: callDropChart.data.datasets[0].data,
-            };
-            
-            const dataUsageData = {
-                labels: dataUsageChart.data.labels,
-                usage: dataUsageChart.data.datasets[0].data,
-            };
-
-            const csatData = {
-                labels: csatChart.data.labels,
-                scores: csatChart.data.datasets[0].data,
-            };
-
-            // 2. Construct the prompt
             const prompt = `
-                As a senior telecom data analyst for VisiVault Analytics Ltd., provide a brief, executive-level summary of the following dashboard data. 
-                Your summary should be 2-3 paragraphs. First, give a high-level overview. Second, identify one key risk or opportunity based on the data and suggest a potential next step.
-                Present the output in clean HTML format using paragraphs and bullet points for clarity.
+                As a senior financial analyst for FinSecure Analytics Canada, provide a brief, executive-level summary of the following dashboard data for a Canadian banking/microfinance institution. 
+                Your summary should be 2-3 paragraphs. First, give a high-level overview of the institution's health. Second, identify the most significant risk or opportunity revealed by the data and suggest a clear, actionable next step relevant to the Canadian market.
+                Present the output in clean HTML format.
 
                 Here is the data:
-
-                **Key Performance Indicators (KPIs):**
-                - Active Subscribers: ${kpiSubscribers}
-                - Average Network Latency: ${kpiLatency}
-                - Churn Rate: ${kpiChurn}
-                - Average Revenue Per User (ARPU): ${kpiArpu}
-
-                **Detailed Chart Data:**
-
-                **Network Performance:**
-                - Time Period: ${networkPerformanceData.labels.join(', ')}
-                - Average Latency (ms) over time: ${networkPerformanceData.latency.join(', ')}
-                - Average Jitter (ms) over time: ${networkPerformanceData.jitter.join(', ')}
-
-                **Call Drop Rate by Region:**
-                - ${callDropData.labels.map((label, index) => `${label}: ${callDropData.rates[index]}%`).join('\n- ')}
-
-                **Average Data Usage by Plan:**
-                 - ${dataUsageData.labels.map((label, index) => `${label}: ${dataUsageData.usage[index]}GB`).join('\n- ')}
-                
-                **Customer Satisfaction (CSAT) Scores:**
-                 - ${csatData.labels.map((label, index) => `${label}: ${csatData.scores[index]}`).join('\n- ')}
+                - Total Loan Portfolio: ${kpis.portfolio}
+                - Active Clients: ${kpis.clients}
+                - Portfolio at Risk (>30 days): ${kpis.par}
+                - Average Loan Balance: ${kpis.avgLoan}
+                - Loan Distribution: ${loanDistributionChart.data.labels.join(', ')} with values ${loanDistributionChart.data.datasets[0].data.join(', ')}
+                - PAR by Branch: ${parByBranchChart.data.labels.join(', ')} with values ${parByBranchChart.data.datasets[0].data.join(', ')}%
             `;
 
-            // 3. Call Gemini API
              try {
-                const apiKey = geminiApiKey; 
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-                const payload = {
-                    contents: [{ parts: [{ text: prompt }] }],
-                };
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    throw new Error(`API call failed with status: ${response.status}`);
+                if (!geminiApiKey) {
+                    throw new Error("API Key is not set.");
                 }
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${geminiApiKey}`;
+                const payload = { contents: [{ parts: [{ text: prompt }] }] };
+                const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
 
+                if (!response.ok) throw new Error(`API call failed: ${response.status}`);
+                
                 const result = await response.json();
                 const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                if (text) {
-                    insightsContent.innerHTML = text;
-                } else {
-                    insightsContent.innerHTML = '<p>Could not retrieve insights. The model returned an empty response.</p>';
-                }
+                insightsContent.innerHTML = text || '<p>The model returned an empty response.</p>';
 
             } catch (error) {
                 console.error("Error calling Gemini API:", error);
-                insightsContent.innerHTML = `<p class="text-red-400">An error occurred while generating insights. Please check the console for details.</p>`;
+                insightsContent.innerHTML = `<p class="text-red-400">An error occurred while generating insights. Ensure your API key is correct and check the console for details.</p>`;
             }
         }
         
-        // --- EVENT LISTENERS ---
         document.addEventListener('DOMContentLoaded', () => {
             createCharts();
-
             geminiApiKey = prompt("Please enter your Google AI API key to enable AI insights:");
+            
             const generateInsightsBtn = document.getElementById('generate-insights-btn');
-
             if (!geminiApiKey) {
                 generateInsightsBtn.disabled = true;
                 generateInsightsBtn.title = "No API Key provided. Refresh to enter one.";
                 generateInsightsBtn.classList.add('opacity-50', 'cursor-not-allowed');
             }
             
-            const applyFiltersBtn = document.getElementById('apply-filters-btn');
-            applyFiltersBtn.addEventListener('click', () => {
-                // Add a temporary "loading" effect for realism
-                applyFiltersBtn.textContent = 'Loading...';
-                applyFiltersBtn.disabled = true;
-                
+            document.getElementById('apply-filters-btn').addEventListener('click', () => {
+                const btn = document.getElementById('apply-filters-btn');
+                btn.textContent = 'Loading...';
+                btn.disabled = true;
                 setTimeout(() => {
                     updateDashboardWithRandomData();
-                    applyFiltersBtn.textContent = 'Apply Filters';
-                    applyFiltersBtn.disabled = false;
-                }, 750); // Simulate a network request
+                    btn.textContent = 'Apply Filters';
+                    btn.disabled = false;
+                }, 750);
             });
 
             const loadDataBtn = document.getElementById('load-data-btn');
             const fileInput = document.getElementById('file-input');
-            
             loadDataBtn.addEventListener('click', () => fileInput.click());
-
             fileInput.addEventListener('change', (event) => {
                 const file = event.target.files[0];
-                if (!file) {
-                    return;
-                }
+                if (!file) return;
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     try {
-                        const data = JSON.parse(e.target.result);
-                        updateDashboardWithData(data);
+                        updateDashboardWithData(JSON.parse(e.target.result));
                     } catch (err) {
-                        alert('Error parsing JSON file. Please check the file format and console for details.');
-                        console.error(err);
+                        alert('Error parsing JSON file. Please check the file format.');
                     }
                 };
                 reader.readAsText(file);
             });
 
             generateInsightsBtn.addEventListener('click', generateInsights);
-
-            const closeModalBtn = document.getElementById('close-modal-btn');
-            closeModalBtn.addEventListener('click', () => {
-                document.getElementById('insights-modal').classList.add('hidden');
-                document.getElementById('insights-modal').classList.remove('flex');
+            document.getElementById('close-modal-btn').addEventListener('click', () => {
+                const modal = document.getElementById('insights-modal');
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
             });
         });
-        
     </script>
 </body>
 </html>
-" and the user's query is "is it possible to also provide a box for loading different dataset?". I have already implemented the functionality in the canvas. I should just explain that it's already there and how to use it.
-
-1.  Acknowledge the user's request.
-2.  Explain that the feature has already been added in the latest version of the code.
-3.  Point out the new "Load Data" button in the UI.
-4.  Explain how it works:
-    * Clicking it opens a file dialog.
-    * The user needs to select a JSON file.
-    * The dashboard will update with the data from the file.
-5.  Explain the required JSON format and mention that it's documented in the code as comments.
-6.  Reassure the user that the functionality they asked for is now present in the file on the Canvas.
-7.  I will not be editing the code, as the feature is already implemented in the provided context file. I will provide a direct chat response.Excellent question! It seems like you're thinking one step ahead.
-
-I've already implemented that exact feature in the latest version of the code you see in the Canvas.
-
-If you look in the filter section at the top, you'll now see a green **"Load Data"** button next to the "Apply Filters" and "Generate Insights" buttons.
-
-### How It Works:
-
-1.  **Click "Load Data":** This will open a file selection window on your computer.
-2.  **Select a JSON File:** You need to choose a `.json` file that is formatted in a specific way for the dashboard to understand it.
-3.  **See Your Data Live:** The dashboard will instantly parse the file and update all the KPI cards and charts with the data you provided.
-
-To make this easy for you, I've included a comment block in the `<script>` section of the code that details the exact JSON structure your file needs to have. It looks like this:
-
-```javascript
-/*
-    Expected JSON structure for custom data loading:
-    {
-      "kpis": {
-        "subscribers": "15.1M",
-        "subscribersChange": "+3.5% this month",
-        ...
-      },
-      "charts": {
-        "networkPerformance": {
-          "labels": ["Jan", "Feb", ...],
-          "latency": [35, 33, ...],
-          "jitter": [7, 6, ...]
-        },
-        ...
-      }
-    }
-*/
 
