@@ -3,6 +3,7 @@ FinSecure Analytics Canada | Banking & Microfinance Dashboard
 This repository contains a single-page, interactive dashboard designed for a Canadian banking or microfinance institution. The project showcases modern data visualization techniques, tracks key financial metrics, and integrates Google's Gemini API to provide AI-powered analytical insights.
 
 Live Demo: https://tonymah2024.github.io/banking/
+
 Key Features
 
     KPI Monitoring: At-a-glance cards for crucial financial metrics like Total Loan Portfolio, Active Clients, Portfolio at Risk (PAR), and Average Loan Balance, all localized for the Canadian market (CAD).
